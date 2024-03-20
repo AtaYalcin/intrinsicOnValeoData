@@ -1,4 +1,3 @@
-# intrinsicOnValeoData
 If you want to repliate the results
 
 add the following three lines to the .bashrc file in the Karolina Cluster
@@ -29,10 +28,14 @@ connect to the GPU capable node by "salloc -A DD-23-122 -p qgpu --time=00:45:00"
 
 in order to not waste gpu nodes resources run the following command at the folder containing all the folders containing camera sequences and nothing else.
 
-find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && pwd && source activate droidenv  && cd XXXXX  && python demo.py --imagedir=YYYYY/valeo/'{}' --opt_intr --camera_model=mei" \;
+find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && pwd && source activate droidenv  && cd XXXXX  && python demo.py --imagedir=YYYYY/valeo/'{}' --num_images=ZZZ --opt_intr --camera_model=mei" \;
 replace XXXXX with the path of the folder containing Droidcalib demo.py with respect to current folder(u can use absolute adressing).
 Replace YYYYY with the path of the current folder with respect to the folder containing Droidcalib Demo.py (u can use absolute adressing)  
+Replace ZZZ with how many images do you want to be used by the Droidcalib. Warning: Droidcalib fails as this number becomes too large
+
 in our implementation the script was
-find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && pwd && source activate droidenv  && cd ./../../../  && python demo.py --imagedir=./datasets/valeo/'{}' --opt_intr --camera_model=mei" \;
+find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && pwd && source activate droidenv  && cd ./../../../  && python demo.py --imagedir=./datasets/valeo/'{}' --num_images=300 --opt_intr --num_images=300 --camera_model=mei" \;
 
 
+ERROR HANDLING:
+If you face issues with the environment, specifically torch try deleting and reconfiguring the environement(fixed for me)
