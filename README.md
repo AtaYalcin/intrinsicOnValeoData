@@ -1,4 +1,4 @@
-If you want to repliate the results
+If you want to replicate the results
 
 add the following three lines to the .bashrc file in the Karolina Cluster
 
