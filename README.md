@@ -36,6 +36,7 @@ Replace ZZZZZ with the desired stride value.
 the valeo data that was used by us contained around 1800 images. Droidcalib works best when numImages~300 thus we used a stride of 6
 in our implementation the script was
 find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && pwd && source activate droidenv  && cd ./../../../  && python demo.py --imagedir=./datasets/valeo/'{}'  --opt_intr --camera_model=mei --stride 6" \;
+
 Droidcalib works well with ~300 images. The given valeo dataset contains around 1800 images, thus a stride of 6 was used.
 
 The resulting output of the program can be found at DroidCalibResults.txt
