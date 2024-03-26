@@ -1,4 +1,4 @@
-If you want to replicate the results
+If you want to replicate the results (rr)
 
 add the following three lines to the .bashrc file in the Karolina Cluster
 
@@ -7,7 +7,7 @@ ml CUDA/11.3.1
 ml GCC/9.4.0
 
 clone https://github.com/boschresearch/DroidCalib.git
-create a conda environment droşdenv using standart terminal commands stated in https://github.com/boschresearch/DroidCalib github page.
+create a conda environment droidenv using standart terminal commands stated in https://github.com/boschresearch/DroidCalib github page.
 	Warning: conda keeps getting stuck at "Solving Environment". Use detailed environment under misc/environment_detailed_vis.yaml (with visualization) or misc/environment_detailed.yaml (without visualization).
 	run setup.py (this will take some while)
 	activate this environment with "source activate droidenv" rather than "conda activate droidenv" when needed.
