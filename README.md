@@ -7,12 +7,12 @@ ml CUDA/11.3.1
 ml GCC/9.4.0
 
 clone https://github.com/boschresearch/DroidCalib.git
-create a conda environment droidenv using standart terminal commands stated in https://github.com/boschresearch/DroidCalib github page.
+create a conda environment droidenv using standard terminal commands stated in https://github.com/boschresearch/DroidCalib github page.
 	Warning: conda keeps getting stuck at "Solving Environment". Use detailed environment under misc/environment_detailed_vis.yaml (with visualization) or misc/environment_detailed.yaml (without visualization).
 	run setup.py (this will take some while)
 	activate this environment with "source activate droidenv" rather than "conda activate droidenv" when needed.
 
-
+we used "Veh01_20230208_105703_076"
 Using the S3 procedure defined by the shared documents at adasoffice by valeo, download and unzip data.(since explanation of this procedure might reveal sensitive info, no further details will be provided.)
 	Karolina cluster puts storage limitations, thus deleting the extracted .zip files at each extraction is important.
 	"for i in *.zip; do unzip "$i" -d "${i%%.zip}"; done" is a benefitial command at extraction of each zip file in a folder into a seperate folder.
@@ -28,15 +28,17 @@ connect to the GPU capable node by "salloc -A DD-23-122 -p qgpu --time=00:45:00"
 
 in order to not waste gpu nodes resources run the following command at the folder containing all the folders containing camera sequences and nothing else.
 
-find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && pwd && source activate droidenv  && cd XXXXX  && python demo.py --imagedir=YYYYY/valeo/'{}' --opt_intr --camera_model=mei" \;
+find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && pwd && source activate droidenv  && cd XXXXX  && python demo.py --imagedir=YYYYY/valeo/'{}' --opt_intr --camera_model=mei --stride ZZZZZ" \;
 replace XXXXX with the path of the folder containing Droidcalib demo.py with respect to current folder(u can use absolute adressing).
 Replace YYYYY with the path of the current folder with respect to the folder containing Droidcalib Demo.py (u can use absolute adressing)
-  
+Replace ZZZZZ with the desired stride value.
+
 the valeo data that was used by us contained around 1800 images. Droidcalib works best when numImages~300 thus we used a stride of 6
 in our implementation the script was
-find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && pwd && source activate droidenv  && cd ./../../../  && python demo.py --imagedir=./datasets/valeo/'{}'  --opt_intr --num_images=300 --camera_model=mei" \;
+find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && pwd && source activate droidenv  && cd ./../../../  && python demo.py --imagedir=./datasets/valeo/'{}'  --opt_intr --camera_model=mei --stride 6" \;
+Droidcalib works well with ~300 images. The given valeo dataset contains around 1800 images, thus a stride of 6 was used.
 
-
+The resulting output of the program can be found at DroidCalibResults.txt
 
 ERROR HANDLING:
 If you face issues with the environment, specifically torch try deleting and reconfiguring the environement(fixed for me)
