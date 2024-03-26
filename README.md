@@ -26,7 +26,7 @@ connect to the GPU capable node by "salloc -A DD-23-122 -p qgpu --time=00:45:00"
 	more info about salloc at "https://docs.it4i.cz/dgx2/job_execution/?h=salloc"
 	more info about other queues at "https://docs.it4i.cz/general/karolina-partitions/?h=qgpu" 
 
-in order to not waste gpu nodes resources run the following command at the folder containing all the folders containing camera sequences and nothing else.
+in order to not waste gpu nodes resources run the following command at the folder containing all the folders containing camera sequences and no other folders.
 
 find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && pwd && source activate droidenv  && cd XXXXX  && python demo.py --imagedir=YYYYY/valeo/'{}' --opt_intr --camera_model=mei --stride ZZZZZ" \;
 replace XXXXX with the path of the folder containing Droidcalib demo.py with respect to current folder(u can use absolute adressing).
