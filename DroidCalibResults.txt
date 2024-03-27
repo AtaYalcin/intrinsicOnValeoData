@@ -1,3 +1,5 @@
+/home/it4i-atay/calibration/intrinsicCalibrationMatrix/DroidCalib/datasets/valeo/Veh01_20230208_105703_076_CAM_NFV_FW_CE_NO_ENC.npzenv  && cd ./../../../  && python demo.py --imagedir=./datasets/valeo/'{}'  --op0it [00:00, ?it/s]droidcalib.pth
+
 /home/it4i-atay/.conda/envs/droidenv/lib/python3.9/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  /opt/conda/conda-bld/pytorch_1640811803361/work/aten/src/ATen/native/TensorShape.cpp:2157.)
   return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
 300it [03:40,  1.36it/s]
