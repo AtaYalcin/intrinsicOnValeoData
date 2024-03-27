@@ -41,5 +41,7 @@ Droidcalib works well with ~300 images. The given valeo dataset contains around 
 
 The resulting output of the program can be found at DroidCalibResults.txt
 
+then we ran (removed --camera_model argument) the model with pinhole camera model assumption and got the results that are displayed at DroidCalibResults2.txt
+
 ERROR HANDLING:
 If you face issues with the environment, specifically torch try deleting and reconfiguring the environement(fixed for me)
