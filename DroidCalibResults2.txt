@@ -1,0 +1,233 @@
+/home/it4i-atay/calibration/intrinsicCalibrationMatrix/DroidCalib/datasets/valeo/Veh01_20230208_105703_076_CAM_NFV_FW_CE_NO_ENC.npz
+0it [00:00, ?it/s]droidcalib.pth
+/home/it4i-atay/.conda/envs/droidenv/lib/python3.9/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  /opt/conda/conda-bld/pytorch_1640811803361/work/aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+300it [03:19,  1.51it/s]
+################################
+Global BA Iteration #1
+Global BA Iteration #2
+Global BA Iteration #3
+Global BA Iteration #4
+Global BA Iteration #5
+Global BA Iteration #6
+Global BA Iteration #7
+################################
+Global BA Iteration #1
+Global BA Iteration #2
+Global BA Iteration #3
+Global BA Iteration #4
+Global BA Iteration #5
+Global BA Iteration #6
+Global BA Iteration #7
+Global BA Iteration #8
+Global BA Iteration #9
+Global BA Iteration #10
+Global BA Iteration #11
+Global BA Iteration #12
+################################
+Initial intrinsics:
+fx = 2386.0, fy = 2386.0, ppx = 1448.0, ppy = 938.0
+Estimated intrinsics:
+fx = 5558.10, fy = 5052.64, ppx = 1502.62, ppy = 905.80
+/home/it4i-atay/calibration/intrinsicCalibrationMatrix/DroidCalib/datasets/valeo/Veh01_20230208_105703_076_CAM_SUR_FR_CE_NO_ENC.npz
+0it [00:00, ?it/s]droidcalib.pth
+/home/it4i-atay/.conda/envs/droidenv/lib/python3.9/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  /opt/conda/conda-bld/pytorch_1640811803361/work/aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+300it [01:52,  2.66it/s]
+################################
+Global BA Iteration #1
+Global BA Iteration #2
+Global BA Iteration #3
+Global BA Iteration #4
+Global BA Iteration #5
+Global BA Iteration #6
+Global BA Iteration #7
+################################
+Global BA Iteration #1
+Global BA Iteration #2
+Global BA Iteration #3
+Global BA Iteration #4
+Global BA Iteration #5
+Global BA Iteration #6
+Global BA Iteration #7
+Global BA Iteration #8
+Global BA Iteration #9
+Global BA Iteration #10
+Global BA Iteration #11
+Global BA Iteration #12
+################################
+Initial intrinsics:
+fx = 1576.0, fy = 1576.0, ppx = 968.0, ppy = 608.0
+Estimated intrinsics:
+fx = 1732.79, fy = 1616.02, ppx = 1142.51, ppy = 594.05
+/home/it4i-atay/calibration/intrinsicCalibrationMatrix/DroidCalib/datasets/valeo/Veh01_20230208_105703_076_CAM_SUR_RE_CE_SO_ENC.npz
+0it [00:00, ?it/s]droidcalib.pth
+/home/it4i-atay/.conda/envs/droidenv/lib/python3.9/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  /opt/conda/conda-bld/pytorch_1640811803361/work/aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+300it [01:27,  3.41it/s]
+################################
+Global BA Iteration #1
+Global BA Iteration #2
+Global BA Iteration #3
+Global BA Iteration #4
+Global BA Iteration #5
+Global BA Iteration #6
+Global BA Iteration #7
+################################
+Global BA Iteration #1
+Global BA Iteration #2
+Global BA Iteration #3
+Global BA Iteration #4
+Global BA Iteration #5
+Global BA Iteration #6
+Global BA Iteration #7
+Global BA Iteration #8
+Global BA Iteration #9
+Global BA Iteration #10
+Global BA Iteration #11
+Global BA Iteration #12
+################################
+Initial intrinsics:
+fx = 1576.0, fy = 1576.0, ppx = 968.0, ppy = 608.0
+Estimated intrinsics:
+fx = 1597.80, fy = 1492.63, ppx = 1148.71, ppy = 604.39
+/home/it4i-atay/calibration/intrinsicCalibrationMatrix/DroidCalib/datasets/valeo/Veh01_20230208_105703_076_CAM_SUR_WM_LE_WE_ENC.npz
+0it [00:00, ?it/s]droidcalib.pth
+/home/it4i-atay/.conda/envs/droidenv/lib/python3.9/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  /opt/conda/conda-bld/pytorch_1640811803361/work/aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+300it [04:05,  1.22it/s]
+################################
+Global BA Iteration #1
+Global BA Iteration #2
+Global BA Iteration #3
+Global BA Iteration #4
+Global BA Iteration #5
+Global BA Iteration #6
+Global BA Iteration #7
+################################
+Global BA Iteration #1
+Global BA Iteration #2
+Global BA Iteration #3
+Global BA Iteration #4
+Global BA Iteration #5
+Global BA Iteration #6
+Global BA Iteration #7
+Global BA Iteration #8
+Global BA Iteration #9
+Global BA Iteration #10
+Global BA Iteration #11
+Global BA Iteration #12
+################################
+Initial intrinsics:
+fx = 1576.0, fy = 1576.0, ppx = 968.0, ppy = 608.0
+Estimated intrinsics:
+fx = 1927.28, fy = 1489.00, ppx = 955.80, ppy = 643.10
+/home/it4i-atay/calibration/intrinsicCalibrationMatrix/DroidCalib/datasets/valeo/Veh01_20230208_105703_076_CAM_SUR_WM_RI_EA_ENC.npz
+0it [00:00, ?it/s]droidcalib.pth
+/home/it4i-atay/.conda/envs/droidenv/lib/python3.9/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  /opt/conda/conda-bld/pytorch_1640811803361/work/aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+171it [01:27,  1.89it/s]Warning: Cholesky decomposition was not successful.
+Warning: Cholesky decomposition was not successful.
+Warning: Cholesky decomposition was not successful.
+172it [01:28,  1.50it/s]Warning: Cholesky decomposition was not successful.
+174it [01:30,  1.33it/s]Warning: Cholesky decomposition was not successful.
+294it [03:25,  1.10s/it]Warning: Cholesky decomposition was not successful.
+300it [03:32,  1.41it/s]
+################################
+Global BA Iteration #1
+Global BA Iteration #2
+Global BA Iteration #3
+Global BA Iteration #4
+Warning: Cholesky decomposition was not successful.
+Global BA Iteration #5
+Global BA Iteration #6
+Global BA Iteration #7
+################################
+Global BA Iteration #1
+Global BA Iteration #2
+Warning: Cholesky decomposition was not successful.
+Global BA Iteration #3
+Warning: Cholesky decomposition was not successful.
+Warning: Cholesky decomposition was not successful.
+Global BA Iteration #4
+Warning: Cholesky decomposition was not successful.
+Global BA Iteration #5
+Global BA Iteration #6
+Global BA Iteration #7
+Warning: Cholesky decomposition was not successful.
+Global BA Iteration #8
+Warning: Cholesky decomposition was not successful.
+Global BA Iteration #9
+Global BA Iteration #10
+Global BA Iteration #11
+Global BA Iteration #12
+################################
+Initial intrinsics:
+fx = 1576.0, fy = 1576.0, ppx = 968.0, ppy = 608.0
+Estimated intrinsics:
+fx = 2039.97, fy = 1153.31, ppx = 890.80, ppy = 571.74
+/home/it4i-atay/calibration/intrinsicCalibrationMatrix/DroidCalib/datasets/valeo/Veh01_20230208_105703_076_CAM_WFV_FW_CE_NO_ENC.npz
+0it [00:00, ?it/s]droidcalib.pth
+/home/it4i-atay/.conda/envs/droidenv/lib/python3.9/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  /opt/conda/conda-bld/pytorch_1640811803361/work/aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+300it [03:18,  1.51it/s]
+################################
+Global BA Iteration #1
+Global BA Iteration #2
+Global BA Iteration #3
+Global BA Iteration #4
+Global BA Iteration #5
+Global BA Iteration #6
+Global BA Iteration #7
+################################
+Global BA Iteration #1
+Global BA Iteration #2
+Global BA Iteration #3
+Global BA Iteration #4
+Global BA Iteration #5
+Global BA Iteration #6
+Global BA Iteration #7
+Global BA Iteration #8
+Global BA Iteration #9
+Global BA Iteration #10
+Global BA Iteration #11
+Global BA Iteration #12
+################################
+Initial intrinsics:
+fx = 2386.0, fy = 2386.0, ppx = 1448.0, ppy = 938.0
+Estimated intrinsics:
+fx = 2532.59, fy = 2216.88, ppx = 1547.08, ppy = 1000.33
+/home/it4i-atay/calibration/intrinsicCalibrationMatrix/DroidCalib/datasets/valeo/Veh01_20230208_105703_076_CAM_WFV_RW_CE_SO_ENC.npz
+0it [00:00, ?it/s]droidcalib.pth
+/home/it4i-atay/.conda/envs/droidenv/lib/python3.9/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  /opt/conda/conda-bld/pytorch_1640811803361/work/aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+101it [00:44,  1.42it/s]Warning: Cholesky decomposition was not successful.
+Warning: Cholesky decomposition was not successful.
+Warning: Cholesky decomposition was not successful.
+300it [02:25,  2.07it/s]
+################################
+Global BA Iteration #1
+Global BA Iteration #2
+Global BA Iteration #3
+Global BA Iteration #4
+Global BA Iteration #5
+Global BA Iteration #6
+Global BA Iteration #7
+################################
+Global BA Iteration #1
+Global BA Iteration #2
+Global BA Iteration #3
+Global BA Iteration #4
+Global BA Iteration #5
+Global BA Iteration #6
+Global BA Iteration #7
+Global BA Iteration #8
+Global BA Iteration #9
+Global BA Iteration #10
+Global BA Iteration #11
+Global BA Iteration #12
+################################
+Initial intrinsics:
+fx = 2386.0, fy = 2386.0, ppx = 1448.0, ppy = 938.0
+Estimated intrinsics:
+fx = 4738.09, fy = 2033.31, ppx = 867.75, ppy = 1217.82
