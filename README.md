@@ -28,9 +28,10 @@ connect to the GPU capable node by "salloc -A DD-23-122 -p qgpu --time=00:45:00"
 
 in order to not waste gpu nodes resources run the following command at the folder containing all the folders containing camera sequences and no other folders.
 
-find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && pwd && source activate droidenv  && cd XXXXX  && python demo.py --imagedir=YYYYY/valeo/'{}' --opt_intr --camera_model=mei" \;
+find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && pwd && source activate droidenv  && cd XXXXX  && python demo.py --imagedir=YYYYY/valeo/'{}' --opt_intr --camera_model=mei --num_images ZZZZZ" \;
 replace XXXXX with the path of the folder containing Droidcalib demo.py with respect to current folder(u can use absolute adressing).
 Replace YYYYY with the path of the current folder with respect to the folder containing Droidcalib Demo.py (u can use absolute adressing)
+Replace ZZZZZ with the number of images that should attend the computation. If image size is < 300 you dont need to şmpose such a limitation. 
 
 the valeo data that was used by us contained around 1800 images. Droidcalib works best when numImages~300.
 in our implementation the script was
