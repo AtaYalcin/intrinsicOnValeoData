@@ -2,9 +2,12 @@ If you want to replicate the results (rr)
 
 add the following three lines to the .bashrc file in the Karolina Cluster
 
-ml Anaconda3/2023.09-0
-ml CUDA/11.3.1
+ml Anaconda3/2024.02-1
+ml CUDA/12.4.0
 ml GCC/9.4.0
+
+NOTE : these resources are updated frequently so check for the latest version from the it4i documentation.
+
 
 clone https://github.com/boschresearch/DroidCalib.git
 create a conda environment droidenv using standard terminal commands stated in https://github.com/boschresearch/DroidCalib github page.
@@ -37,7 +40,47 @@ the valeo data that was used by us contained around 1800 images. Droidcalib work
 in our implementation the script was
 find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && pwd && source activate droidenv  && cd ./../../../  && python demo.py --imagedir=./datasets/valeo/'{}'  --opt_intr --camera_model=mei --num_images 300" \;
 
-The resulting output of the program can be found at DroidCalibResults.txt
+the output can be seen at DroidCalibResults.txt.
+the non-eronous result of this test are as follows:
+Veh01_20230208_105703_076_CAM_NFV_FW_CE_NO_ENC.npz : fx = 3139.66, fy = 3082.48, ppx = 1361.14, ppy = 1118.40, xi = -0.512
+Veh01_20230208_105703_076_CAM_WFV_FW_CE_NO_ENC.npz : fx = 2589.18, fy = 2282.24, ppx = 1532.35, ppy = 1097.41, xi = 0.851
+
+then we run the test again with pinhole assumption i.e.
+find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && pwd && source activate droidenv  && cd ./../../../  && python demo.py --imagedir=./datasets/valeo/'{}'  --opt_intr --num_images 300" \;
+
+the output can be seen at DroidCalibResults2.txt.
+the non-eronous result of this test are as follows:
+Veh01_20230208_105703_076_CAM_NFV_FW_CE_NO_ENC.npz : fx = 4340.35, fy = 3441.87, ppx = 1388.51, ppy = 714.99
+Veh01_20230208_105703_076_CAM_SUR_FR_CE_NO_ENC.npz : fx = 1658.95, fy = 1562.62, ppx = 974.20, ppy = 624.25
+Veh01_20230208_105703_076_CAM_SUR_RE_CE_SO_ENC.npz : fx = 1583.47, fy = 1579.48, ppx = 973.90, ppy = 649.06
+Veh01_20230208_105703_076_CAM_SUR_WM_LE_WE_ENC.npz : fx = 1593.66, fy = 1558.85, ppx = 1036.86, ppy = 808.10
+Veh01_20230208_105703_076_CAM_SUR_WM_RI_EA_ENC.npz : fx = 1632.69, fy = 1561.78, ppx = 965.68, ppy = 686.04
+Veh01_20230208_105703_076_CAM_WFV_FW_CE_NO_ENC.npz : fx = 2533.10, fy = 2304.01, ppx = 1491.16, ppy = 1027.23
+Veh01_20230208_105703_076_CAM_WFV_RW_CE_SO_ENC.npz : fx = 4629.37, fy = 900.80, ppx = 902.36, ppy = 1860.87
+
+testing stage:
+we eleminate some of the tests by inspecting image data.
+
+we will test:
+Veh01_20230208_105703_076_CAM_NFV_FW_CE_NO_ENC.npz : fx = 4340.35, fy = 3441.87, ppx = 1388.51, ppy = 714.99
+as pinhole camera model
+
+further evaluate on:
+Veh01_20230208_105703_076_CAM_SUR_FR_CE_NO_ENC.npz : fx = 1658.95, fy = 1562.62, ppx = 974.20, ppy = 624.25
+Veh01_20230208_105703_076_CAM_SUR_RE_CE_SO_ENC.npz : fx = 1583.47, fy = 1579.48, ppx = 973.90, ppy = 649.06
+Veh01_20230208_105703_076_CAM_WFV_FW_CE_NO_ENC.npz : fx = 2533.10, fy = 2304.01, ppx = 1491.16, ppy = 1027.23
+Veh01_20230208_105703_076_CAM_WFV_RW_CE_SO_ENC.npz : fx = 4629.37, fy = 900.80, ppx = 902.36, ppy = 1860.87
+whether as pinhole 
+
+
+definately not pinhole
+Veh01_20230208_105703_076_CAM_SUR_WM_LE_WE_ENC.npz : fx = 1593.66, fy = 1558.85, ppx = 1036.86, ppy = 808.10
+Veh01_20230208_105703_076_CAM_SUR_WM_RI_EA_ENC.npz : fx = 1632.69, fy = 1561.78, ppx = 965.68, ppy = 686.04
+.
+
+we will test 
+Veh01_20230208_105703_076_CAM_WFV_FW_CE_NO_ENC.npz : fx = 2589.18, fy = 2282.24, ppx = 1532.35, ppy = 1097.41, xi = 0.851
+as unified camera model
 
 ERROR HANDLING:
 If you face issues with the environment, specifically torch try deleting and reconfiguring the environement.
